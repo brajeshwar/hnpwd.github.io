@@ -18,7 +18,7 @@
   (with-output-to-string (s)
     (when (and (getf item :name) (getf item :feed) (getf item :blog))
       (format s
-              "    <outline type=\"rss\" text=\"~a\" title=\"~a\" xmlUrl=\"~a\" htmlUrl=\"~a\"/>~%"
+              "      <outline type=\"rss\" text=\"~a\" title=\"~a\" xmlUrl=\"~a\" htmlUrl=\"~a\"/>~%"
               (getf item :name)
               (getf item :name)
               (getf item :feed)
