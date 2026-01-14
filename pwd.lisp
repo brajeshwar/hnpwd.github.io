@@ -64,6 +64,13 @@
   :hnuid "nchagnet"
   :bio "Writes about physics, technology and data science.")
 
+ (:name "Philip I. Thomas"
+  :site "https://philipithomas.com/"
+  :blog "https://contraption.co/"
+  :feed "https://contraption.co/rss/"
+  :hnuid "philip1209"
+  :bio "Writes about crafting digital tools.")
+
  (:name "Sam Broner"
   :site "https://sambroner.com/"
   :feed "https://sambroner.com/rss.xml"
