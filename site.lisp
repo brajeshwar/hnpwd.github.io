@@ -14,7 +14,18 @@
      (string= (getf item :blog) "https://example.com/"))
    (read-list "blogs.lisp")))
 
+(defun validate-name-order (items)
+  "Check that entries are arranged in the order of names."
+  (let ((prev-name)
+        (curr-name))
+    (dolist (item items)
+      (setf curr-name (getf item :name))
+      (when (and prev-name (string< curr-name prev-name))
+        (error "Incorrect order for item ~a" curr-name))
+      (setf prev-name curr-name))))
+
 (defun make-opml-outline (item)
+  "Create an outline element for the specified blog entry."
   (with-output-to-string (s)
     (when (and (getf item :name) (getf item :feed) (getf item :blog))
       (format s
@@ -93,6 +104,7 @@
 (defun main ()
   "Create artefacts."
   (let ((blogs (read-blogs)))
+    (validate-name-order blogs)
     (write-file "blogs.opml" (make-opml blogs))
     (write-file "index.html" (make-html blogs))))
 

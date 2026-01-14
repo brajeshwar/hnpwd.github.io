@@ -7,7 +7,6 @@
 ;;; ordinary text editors.
 
 (
-
  (:name "Jeff Geerling"
   :blog "https://www.jeffgeerling.com/"
   :feed "https://www.jeffgeerling.com/blog.xml"
@@ -39,5 +38,4 @@
   :about "https://example.com/about/"
   :now "https://example.com/now/"
   :hnuid "example")
-
- )
+)
