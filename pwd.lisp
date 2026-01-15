@@ -68,7 +68,7 @@
   :feed "https://ztoz.blog/index.xml"
   :about "https://ztoz.blog/about/"
   :hnuid "jwstarr"
-  :bio "Writes about computing history and computer science")
+  :bio "Writes about computing history and computer science.")
 
  (:name "John Graham-Cumming"
   :site "https://jgc.org/"
